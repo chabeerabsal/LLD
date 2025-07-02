@@ -1,21 +1,18 @@
 package Modellor;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class ListTaxi {
-    private Map<String,Taxi> taxiList=new HashMap<>();
+    private List<Taxi> taxiList=new ArrayList<>();
 
     public void addTaxi(Taxi taxi){
-        taxiList.put(taxi.getId(),taxi);
+        taxiList.add(taxi);
     }
-    public Taxi getTaxiList(String id){
-        return taxiList.get(id);
-    }
+//    public Taxi getTaxiList(String id){
+//        return taxiList.get(id);
+//    }
 
-    public Map<String, Taxi> getTaxiList() {
+    public List<Taxi> getTaxiList() {
         return taxiList;
     }
 }

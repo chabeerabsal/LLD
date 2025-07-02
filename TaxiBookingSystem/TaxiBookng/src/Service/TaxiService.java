@@ -10,18 +10,20 @@ import java.util.Map;
 
 public class TaxiService {
     //ListTaxi listTaxi = new ListTaxi();
-    FeesCalculation feesCalculation = new FeesCalculation();
-    public void taxiBooking(Customer customer,ListTaxi listTaxi){
-        for(Map.Entry<String,Taxi>mp:listTaxi.getTaxiList().entrySet()){
-            Taxi taxi = mp.getValue();
-            if(taxi.getAvailabity()==customer.getPickupPoint() && taxi.isAvailable()){
-                taxi.isAvailabity(false);
-                taxi.setAvailabity(customer.getDropOffPoint());
-                double amount=feesCalculation.totalAmount(customer.getPickupPoint(), customer.getDropOffPoint());
-                taxi.setEarnings(amount);
-                System.out.println(taxi.getId()+"Taxi alloted"+taxi.getEarnings());
-            }
+    private FeesCalculation feesCalculation;
+    public TaxiService(){
+        feesCalculation = new FeesCalculation();
+    }
 
+
+    public void taxiBooking(Customer customer,ListTaxi listTaxi){
+        TaxiAllocation taxiAllocation = new TaxiAllocation();
+        Taxi taxiAvailable=taxiAllocation.taxiAllocation(listTaxi, customer.getPickupPoint());
+        if(taxiAvailable!=null){
+            taxiAvailable.setAvailabity(customer.getDropOffPoint());
+            double totalAmount=feesCalculation.totalAmount(customer.getPickupPoint(), customer.getDropOffPoint());
+            taxiAvailable.setEarnings(totalAmount);
+            System.out.println("Taxi is available"+taxiAvailable.getId()+"booked"+taxiAvailable.getEarnings());
         }
     }
 }

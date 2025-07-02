@@ -7,6 +7,10 @@ public class FeesCalculation {
 
     Map<Character,Integer> map=new HashMap<>();
 
+    FeesCalculation(){
+        addValue();
+    }
+
 
     public double totalAmount(char pickupPoint,char dropPoint)
     {

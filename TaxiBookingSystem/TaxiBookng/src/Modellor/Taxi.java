@@ -7,11 +7,11 @@ public class Taxi {
     private double earnings;
     private char availabity;
 
-    public Taxi(String id, String name, boolean isAvailable,char availabity) {
+    public Taxi(String id, String name,double earnings,char availabity) {
         this.id = id;
         this.name = name;
-        this.isAvailable = isAvailable;
-        //this.earnings = earnings;
+       // this.isAvailable = isAvailable;
+        this.earnings = earnings;
         this.availabity = availabity;
     }
     public void setEarnings(double earnings) {
