@@ -4,29 +4,24 @@ import Modellor.ListTaxi;
 import Modellor.Taxi;
 
 public class TaxiAllocation {
-    private double earnings = Double.MAX_VALUE;
-    private Taxi selectedTaxi = null;
+    Taxi selectedTaxi = null;
+    int minDistance = Integer.MAX_VALUE;
+    double minEarnings = Double.MAX_VALUE;
 
-    public Taxi taxiAllocation(ListTaxi taxiList, char customerPickupPoint) {
+    public Taxi taxiAllocation(ListTaxi taxiList, char customerPickupPoint,int customerPickupTime) {
+
+
         for (Taxi taxi : taxiList.getTaxiList()) {
-            char availability = taxi.getAvailabity();
+            int distance = Math.abs(taxi.getAvailability() - customerPickupPoint);
 
-            // Taxi is at the pickup point
-            if (availability == customerPickupPoint) {
-                if (taxi.getEarnings() < earnings) {
-                    earnings = taxi.getEarnings();
-                    selectedTaxi = taxi;
-                }
-            }
-
-            // Taxi is before the pickup point
-            else if (availability < customerPickupPoint) {
-                // fallback option if no taxi is exactly at pickup point
-                if (selectedTaxi == null) {
-                    selectedTaxi = taxi;
-                }
+            if ((distance < minDistance &&taxi.getFreetime()<=customerPickupTime)||
+                    (distance == minDistance && taxi.getEarnings() < minEarnings&&taxi.getFreetime()<=customerPickupTime)) {
+                selectedTaxi = taxi;
+                minDistance = distance;
+                minEarnings = taxi.getEarnings();
             }
         }
         return selectedTaxi;
+
     }
 }

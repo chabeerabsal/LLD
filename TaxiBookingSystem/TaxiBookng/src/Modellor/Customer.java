@@ -5,12 +5,14 @@ public class Customer {
     private String customerName;
     private char pickupPoint;
     private char dropOffPoint;
+    private int pickupTIme;
 
-   public Customer(String id, String customerName, char pickupPoint, char dropOffPoint) {
+   public Customer(String id, String customerName, char pickupPoint, char dropOffPoint,int pickupTIme) {
         this.id = id;
         this.customerName = customerName;
         this.pickupPoint = pickupPoint;
         this.dropOffPoint = dropOffPoint;
+        this.pickupTIme = pickupTIme;
     }
 
     public String getId() {
@@ -27,5 +29,9 @@ public class Customer {
 
     public char getDropOffPoint() {
         return dropOffPoint;
+    }
+
+    public int getPickupTime() {
+       return pickupTIme;
     }
 }

@@ -5,7 +5,7 @@ import java.util.Map;
 
 public class FeesCalculation {
 
-    Map<Character,Integer> map=new HashMap<>();
+   private  Map<Character,Integer> map=new HashMap<>();
 
     FeesCalculation(){
         addValue();
@@ -31,4 +31,7 @@ public class FeesCalculation {
         map.put('F',6);
     }
 
+    public Map<Character, Integer> getMap() {
+        return map;
+    }
 }
