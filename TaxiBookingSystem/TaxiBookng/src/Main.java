@@ -21,6 +21,7 @@ public class Main {
         Taxi taxi2=new Taxi("T3","Welcome",0,'A',9);
         Taxi taxi3=new Taxi("T4","gt",0,'A',9);
 
+
         ListTaxi listTaxi=new ListTaxi();
         listTaxi.addTaxi(taxi);
         listTaxi.addTaxi(taxi1);
