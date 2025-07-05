@@ -29,6 +29,7 @@ public class Main {
         listTaxi.addTaxi(taxi3);
 
         TaxiService taxiService=new TaxiService();
+
         taxiService.taxiBooking(customer,listTaxi);
         taxiService.taxiBooking(customer2,listTaxi);
         taxiService.taxiBooking(customer1,listTaxi);
