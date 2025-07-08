@@ -6,6 +6,7 @@ public class Taxi {
     boolean isAvailable;
     private double earnings;
     private char availabity;
+
     private int  Freetime;
 
     public Taxi(String id, String name,double earnings,char availabity,int Freetime) {
