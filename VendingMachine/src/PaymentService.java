@@ -10,4 +10,14 @@ public class PaymentService {
         acceptedCoins.add(20);
         acceptedCoins.add(50);
     }
+    public int cashCalucluation(int money,int quantity,int quantityPrice)
+    {
+        if(acceptedCoins.contains(money))
+        {
+            int cash=  money*quantity;
+            return cash-quantityPrice;
+
+        }
+        return 0;
+    }
 }

@@ -30,8 +30,9 @@ public class VendingMachine {
         else{
             int originalCash=items.getPrice();
             int originalQuantity=items.getQuantity();
+            int totalmoney=originalCash*quantity;
             items.setQuantity(originalQuantity-quantity);
-            //paymentService=
+            paymentService.cashCalucluation(cash,quantity,totalmoney);
 
         }
     }
