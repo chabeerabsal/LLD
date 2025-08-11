@@ -1,4 +1,11 @@
 public class Items {
+    public Items(String itemName, int quantity, int price, String code) {
+        this.itemName = itemName;
+        this.quantity = quantity;
+        this.price = price;
+        this.code = code;
+    }
+
     private String itemName;
     private int quantity;
     private int price;

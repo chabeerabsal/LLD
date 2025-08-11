@@ -2,6 +2,10 @@ import java.util.HashSet;
 
 public class PaymentService {
     private HashSet<Integer> acceptedCoins=new HashSet<>();
+    PaymentService()
+    {
+        validCash();
+    }
     private void validCash()
     {
         acceptedCoins.add(1);
