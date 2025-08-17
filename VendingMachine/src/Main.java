@@ -17,5 +17,6 @@ public class Main {
         inventory.addItems(items4);
         VendingMachine vendingMachine=new VendingMachine(inventory);
         vendingMachine.selectedItems("A4",20,2);
+
     }
 }
