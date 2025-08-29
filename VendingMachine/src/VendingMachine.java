@@ -45,7 +45,6 @@ public class VendingMachine {
 
                System.out.println("Not enough items please try again");
            }
-
         }
     }
 }
