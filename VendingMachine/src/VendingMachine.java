@@ -41,7 +41,7 @@ public class VendingMachine {
            if(vl>0){
                System.out.println("Vending machine has been successfully called");
            }
-           else{
+           else {
 
                System.out.println("Not enough items please try again");
            }
