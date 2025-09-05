@@ -11,6 +11,10 @@ public class Board {
         board = new PlayingPiece[size][size];
     }
 
+    public PlayingPiece[][] getBoard() {
+        return board;
+    }
+
     public int getSize() {
         return size;
     }
