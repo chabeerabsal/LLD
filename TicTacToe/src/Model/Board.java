@@ -46,13 +46,14 @@ public class Board {
         for(int i = 0; i < size; i++) {
             for(int j = 0; j < size; j++) {
                 if(board[i][j] != null) {
-                    System.out.print(board[i][j]);
+                    System.out.print(board[i][j].getPieceType());
                 }
                 else {
                     System.out.print(" ");
                 }
+                System.out.print("|");
             }
-            System.out.println("|");
+       System.out.println();
         }
     }
 

@@ -25,22 +25,32 @@ public class Tictactoe {
             Player playerturn=players.removeFirst();
             List<Pair<Integer, Integer>> freeSpaces = board.getFreecells();
             if(freeSpaces.isEmpty()) { noWinner = false; continue; }
+
+            board.displayBoard();
             System.out.println("Player "+playerturn.getPlayername()+"Enter row and column");
+
             Scanner input = new Scanner(System.in);
             String choice=input.nextLine();
             String[] value=choice.split(",");
-            int inputRow = Integer.valueOf(value[0]);
-            int inputColumn = Integer.valueOf(value[1]);
-            boolean validmove=board.addPiece(playerturn.getPlayingPiece(),inputRow,inputColumn);
-            if(!validmove) {
+            try {
+                int inputRow = Integer.valueOf(value[0]);
+                int inputColumn = Integer.valueOf(value[1]);
+
+                boolean validmove = board.addPiece(playerturn.getPlayingPiece(), inputRow, inputColumn);
+                if (!validmove) {
+                    System.out.println("Invalid input");
+                    players.addFirst(playerturn);
+                    continue;
+                }
+                players.addLast(playerturn);
+                if (isThereWinner(inputRow, inputColumn, playerturn.getPlayingPiece())) {
+                    return playerturn.getPlayername();
+                }
+            }
+            catch (Exception e) {
                 System.out.println("Invalid input");
                 players.addFirst(playerturn);
                 continue;
-            }
-            players.addLast(playerturn);
-            if(isThereWinner(inputRow,inputColumn,playerturn.getPlayingPiece()))
-            {
-                return playerturn.getPlayername();
             }
 
 
