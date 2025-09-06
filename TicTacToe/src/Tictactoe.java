@@ -8,6 +8,7 @@ import java.util.Scanner;
 public class Tictactoe {
 
     Deque<Player> players;
+    int a;
     Board board;
     public void initialize() {
         players = new LinkedList<>();
@@ -17,10 +18,12 @@ public class Tictactoe {
         Player player2=new Player("Absal", playerO);
         players.add(player1);
         players.add(player2);
+        a=5;
         board=new Board(3);
     }
     public String startGame() {
         boolean noWinner=true;
+        System.out.println("Welcome to Tic-Tac-Toe"+a);
         while (noWinner) {
             Player playerturn=players.removeFirst();
             List<Pair<Integer, Integer>> freeSpaces = board.getFreecells();
