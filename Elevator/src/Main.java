@@ -20,6 +20,9 @@ public class Main {
         floorList.add(floor5);
 
         Building building = new Building(floorList);
+        ExternalDispatcher externalDispatcher = new ExternalDispatcher();
+        externalDispatcher.submitRequest(Direction.UP,5);
+        externalDispatcher.submitRequest(Direction.DOWN,3);
 
     }
 }

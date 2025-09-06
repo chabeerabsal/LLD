@@ -28,7 +28,9 @@ public class ElevatorCar {
 
         if(direction==Direction.UP){
             for(int i=startfloor;i<=destination;i++){
+                currentfloor=i;
                 if(i==destination){
+
                     setDisplay();
                     showDisplay();
                     return true;
