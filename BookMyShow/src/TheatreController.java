@@ -15,7 +15,7 @@ public class TheatreController {
         List<Theatre> theatres=theatreAvailbleinCity.getOrDefault(city,new ArrayList<>());
         theatreAvailbleinCity.put(city,theatres);
     }
-    Map<Theatre,List<Shows>> getallShow(City city,Movie movie) {
+    Map<Theatre,List<Shows>> getAllShow(Movie movie,City city) {
         List<Theatre> theatres=theatreAvailbleinCity.get(city);
         Map<Theatre,List<Shows>> map=new HashMap<>();
         for(Theatre theatre:theatres){

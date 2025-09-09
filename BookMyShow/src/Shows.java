@@ -3,9 +3,18 @@ import java.util.List;
 public class Shows {
     int showsid;
     Movie movie;
+    Screen screen;
     List<Integer> bookedSeats;
     public int getShowsid() {
         return showsid;
+    }
+
+    public Screen getScreen() {
+        return screen;
+    }
+
+    public void setScreen(Screen screen) {
+        this.screen = screen;
     }
 
     public void setShowsid(int showsid) {
@@ -20,11 +29,11 @@ public class Shows {
         this.movie = movie;
     }
 
-    public List<Integer> getBookedSeats() {
+    public List<Integer> getBookedSeatsIds() {
         return bookedSeats;
     }
 
-    public void setBookedSeats(List<Integer> bookedSeats) {
+    public void setBookedSeatsIds(List<Integer> bookedSeats) {
         this.bookedSeats = bookedSeats;
     }
 
