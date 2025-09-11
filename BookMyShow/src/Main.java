@@ -127,6 +127,7 @@ public class Main {
         movieController.addMovie(avengers, City.CHENNAI);
         movieController.addMovie(baahubali, City.BANGALORE);
         movieController.addMovie(baahubali, City.CHENNAI);
+
     }
     private List<Screen> createScreen() {
 
