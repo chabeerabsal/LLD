@@ -120,7 +120,6 @@ public class Main {
         Movie baahubali = new Movie();
         baahubali.setMovieId(2);
         baahubali.setMovieName("BAAHUBALI");
-
         //add movies against the cities
         movieController.addMovie(avengers, City.BANGALORE);
         movieController.addMovie(avengers, City.CHENNAI);
