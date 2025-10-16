@@ -17,6 +17,17 @@ public class ATMMachine {
     private int fivehundred=2;
     private int hundred=3;
 
+    public int getAtmMachineBalance() {
+        return atmMachineBalance;
+    }
+
+    public void setAtmMachineBalance(int atmMachineBalance) {
+        this.atmMachineBalance = atmMachineBalance;
+    }
+
+    private int atmMachineBalance=10000;
+
+
     public int getTwoK() {
         return twoK;
     }
