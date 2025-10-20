@@ -6,4 +6,5 @@ public interface ATMState {
     void SelectOptionState();
     void CashWithdrawalState();
     void checkBalanceState();
+
 }
