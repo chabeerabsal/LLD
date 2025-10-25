@@ -3,7 +3,6 @@ package STATE;
 public class IdleState implements ATMState{
     @Override
     public void idleState(){
-
     }
 
     @Override
