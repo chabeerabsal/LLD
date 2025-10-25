@@ -5,8 +5,6 @@ import Modellor.User;
 import STATE.ATMState;
 
 
-import javax.smartcardio.Card;
-
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
@@ -17,7 +15,8 @@ public class Main {
         BankAccount bankAccount = new BankAccount();
         User user = new User(card,bankAccount);
         user.getBankAccount().setBalance(1000);
-        A
+        ATMMachine atmMachine = new ATMMachine();
+
 
     }
 }
