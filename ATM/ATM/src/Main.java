@@ -1,8 +1,6 @@
-import Modellor.ATMMachine;
-import Modellor.BankAccount;
-import Modellor.Card;
-import Modellor.User;
+import Modellor.*;
 import STATE.ATMState;
+import Modellor.ATM;
 
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
@@ -16,6 +14,8 @@ public class Main {
         User user = new User(card,bankAccount);
         user.getBankAccount().setBalance(1000);
         ATMMachine atmMachine = new ATMMachine();
+        ATM atm= new ATM(atmMachine,user);
+
 
 
     }
