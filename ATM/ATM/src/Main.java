@@ -1,5 +1,4 @@
 import Modellor.*;
-import STATE.ATMState;
 import Modellor.ATM;
 
 
@@ -12,9 +11,12 @@ public class Main {
         card.setPin(1234);
         BankAccount bankAccount = new BankAccount();
         User user = new User(card,bankAccount);
+        UserController userController = new UserController();
+        userController.addUser(user);
         user.getBankAccount().setBalance(1000);
         ATMMachine atmMachine = new ATMMachine();
-        ATM atm= new ATM(atmMachine,user);
+        ATM atm= new ATM(atmMachine);
+
 
 
 

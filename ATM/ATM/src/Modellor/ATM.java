@@ -2,9 +2,22 @@ package Modellor;
 
 public class ATM {
     ATMMachine atmMachine;
-    User user;
-    public ATM(ATMMachine atmMachine, User user) {
+    UserController userController;
+    //User user;
+
+    public ATM(ATMMachine atmMachine) {
         this.atmMachine = atmMachine;
-        this.user = user;
     }
+
+    public void verifyUser(User user) {
+        if(userController.verifyUser(user))
+        {
+
+        }
+        else{
+
+        }
+    }
+
+
 }
