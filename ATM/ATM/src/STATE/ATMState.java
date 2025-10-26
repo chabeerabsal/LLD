@@ -1,10 +1,27 @@
 package STATE;
 
-public interface ATMState {
-    void idleState();
-    void HasCardState();
-    void SelectOptionState();
-    void CashWithdrawalState();
-    void checkBalanceState();
+public abstract class ATMState {
+    void insertCard() {
+
+    }
+    void authentication() {
+
+    }
+
+    void HasCardState() {
+
+    }
+
+    void SelectOptionState() {
+
+    }
+
+    void CashWithdrawalState() {
+
+    }
+
+    void checkBalanceState() {
+
+    }
 
 }

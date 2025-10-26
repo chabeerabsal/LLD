@@ -1,24 +1,10 @@
 package STATE;
 
-public class IdleState implements ATMState{
+public class IdleState extends ATMState{
     @Override
-    public void idleState(){
-    }
-
-    @Override
-   public void HasCardState(){
+    public void insertCard() {
 
     }
-    @Override
-   public  void SelectOptionState(){
 
-    }
-    @Override
-    public void CashWithdrawalState(){
 
-    }
-    @Override
-    public void checkBalanceState(){
-        System.out.println("<UNK>");
-    }
 }
