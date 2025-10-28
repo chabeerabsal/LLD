@@ -20,4 +20,7 @@ public class Card {
     private int no;
     private int pin;
 
+    public boolean validataPIN(int pin) {
+        return this.pin == pin;
+    }
 }

@@ -1,10 +1,14 @@
 package STATE;
 
+import Modellor.ATM;
+import Modellor.User;
+import Modellor.ValidTransaction;
+
 public abstract class ATMState {
-    void insertCard() {
+    void insertCard(ATM atm) {
 
     }
-    void authentication() {
+    void authentication(ATM atm, User user) {
 
     }
 
@@ -12,7 +16,7 @@ public abstract class ATMState {
 
     }
 
-    void SelectOptionState() {
+    void SelectOptionState(ATM atm, ValidTransaction validTransaction) {
 
     }
 
@@ -20,7 +24,12 @@ public abstract class ATMState {
 
     }
 
-    void checkBalanceState() {
+    void checkBalanceState(ATM state) {
+
+    }
+
+    void exit()
+    {
 
     }
 

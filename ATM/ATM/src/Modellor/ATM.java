@@ -8,16 +8,20 @@ public class ATM {
     ATMMachine atmMachine;
     UserController userController;
     //User user;
-    ATMContext atmContext;
+    ATMState currentState;
 
     public ATM(ATMMachine atmMachine) {
         this.atmMachine = atmMachine;
     }
 
+    public void setAtmState(ATMState atmState) {
+        this.currentState = atmState;
+    }
+
     public void verifyUser(User user) {
         if(userController.verifyUser(user))
         {
-           atmContext.setAtmState(new IdleState());
+           setAtmState(new IdleState());
         }
         else{
             System.out.println("Invalid user");
