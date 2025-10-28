@@ -20,7 +20,7 @@ public class ATM {
            atmContext.setAtmState(new IdleState());
         }
         else{
-
+            System.out.println("Invalid user");
         }
     }
 
