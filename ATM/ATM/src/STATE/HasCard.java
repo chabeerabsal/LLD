@@ -12,6 +12,7 @@ public class HasCard extends ATMState {
             atm.setAtmState(new SelectOptionState());
         }
         else{
+
             atm.setAtmState(new IdleState());
         }
 
