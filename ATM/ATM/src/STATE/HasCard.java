@@ -14,6 +14,5 @@ public class HasCard extends ATMState {
         else{
             atm.setAtmState(new IdleState());
         }
-
     }
 }
